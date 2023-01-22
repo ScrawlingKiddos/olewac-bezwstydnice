@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    color: white;
+
+    text-align: center;
+}
+
+marquee {
+    background-image: linear-gradient(to left, red, orange, yellow, lime, pink);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes rotacja {
+    from { 
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to { 
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+#pojemnik {
+    width: 200px;
+    height: 200px;
+
+    perspective: 1000px;
+
+    margin: 70px auto 0;
+}
+
+.duze {
+    margin: 10px;
+    font-size: 72px;
+}
+
+#sekret {
+    color: rgb(2, 2, 2);
+}
+
+/* kwadrat 3d smieszny co sie kreci */
+#kwadrat-3d {
+    width: 200px;
+    height: 200px;
+
+    background-image: url("/szczyny/chlopiec.jpeg");
+
+    position: relative;
+
+    transform-style: preserve-3d;
+    animation: rotacja 8s linear infinite;
+}
+
+.kwadrat-3d-twarz {
+    position: absolute;
+
+    width: inherit;
+    height: inherit;
+
+    background-image: inherit;
+
+    /* background-color: blue;
+    border: 5px solid yellow; */
+
+    background-size: 130%;
+    background-position: center;
+}
+
+.przod {
+    transform: rotateX(0deg) translateZ(100px);
+}
+.tyl {
+    transform: rotateX(-180deg) translateZ(100px);
+}
+.lewo {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.prawo {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.gora {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.dol {
+    transform: rotateX(-90deg) translateZ(100px);
+}
