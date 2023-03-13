@@ -8,6 +8,8 @@ function inbaStart() {
     kwadrat.style.backgroundImage = "url('/szczyny/rzultamorda.jpg')";
     kwadrat.style.backgroundSize = "100%";
 
+    document.getElementById("message").innerText = "Jan Paweł II Kochał małe dzieci!!😇😇";
+    document.getElementById("sekret").style.display = "none";
     inba.loop = true;
     
     inba.play();
