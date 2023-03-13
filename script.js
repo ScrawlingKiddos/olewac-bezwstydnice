@@ -23,7 +23,16 @@ const inba = new Audio("/szczyny/inba.mp3");
 let buffer = "";
 
 kwadrat.addEventListener("click", function () {
-    window.location.href = "https://www.gov.pl";
+    const urls = [
+        "https://www.stomilolsztyn.com/",
+        "https://cracovia.pl/",
+        "https://www.gov.pl",
+        "https://www.arka.gdynia.pl/",
+        "https://www.lechpoznan.pl/",
+        "https://lewica.org.pl/",
+        "https://pis.org.pl/",
+    ];
+    window.location.href = urls[losujNumer(0, urls.length - 1)];
 });
 
 window.addEventListener("keydown", function (event) {
