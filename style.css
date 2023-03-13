@@ -1,7 +1,7 @@
 body {
     background-color: black;
     color: white;
-
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
     text-align: center;
 }
 
@@ -23,7 +23,7 @@ body {
     margin: 70px auto 0;
 }
 
-.duze {
+.duże {
     margin: 10px;
     font-size: 72px;
 }
@@ -32,7 +32,7 @@ body {
     color: rgb(2, 2, 2);
 }
 
-/* kwadrat 3d smieszny co sie kreci */
+/* kwadrat 3d śmieszny co sie kreci */
 #kwadrat-3d {
     width: 200px;
     height: 200px;
@@ -60,7 +60,7 @@ body {
     background-position: center;
 }
 
-.przod {
+.przód {
     transform: rotateX(0deg) translateZ(100px);
 }
 .tyl {

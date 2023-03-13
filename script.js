@@ -13,7 +13,6 @@ function inbaStart() {
     inba.play();
 
     setInterval(function () {
-        console.log("test");
         document.body.style.backgroundColor = `rgb(${losujNumer(0, 255)}, ${losujNumer(0, 255)}, ${losujNumer(0, 255)})`;
     }, 100);
 }
@@ -28,17 +27,17 @@ kwadrat.addEventListener("click", function () {
 });
 
 window.addEventListener("keydown", function (event) {
-    if (event.key.length != 1 && event.key != "Backspace") {
+    if (event.key.length !== 1 && event.key !== "Backspace") {
         return;
     }
 
-    if (event.key == "Backspace") {
+    if (event.key === "Backspace") {
         buffer = "";
     } else {
         buffer += event.key;
     }
 
-    if (buffer == "inba") {
+    if (buffer === "inba") {
         inbaStart();
     }
 });
