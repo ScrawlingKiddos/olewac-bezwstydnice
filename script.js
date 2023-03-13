@@ -23,7 +23,7 @@ const inba = new Audio("/szczyny/inba.mp3");
 let buffer = "";
 
 kwadrat.addEventListener("click", function () {
-    const urls = [
+    const kurwas = [
         "https://www.stomilolsztyn.com/",
         "https://cracovia.pl/",
         "https://www.gov.pl",
@@ -32,7 +32,7 @@ kwadrat.addEventListener("click", function () {
         "https://lewica.org.pl/",
         "https://pis.org.pl/",
     ];
-    window.location.href = urls[losujNumer(0, urls.length - 1)];
+    window.location.href = kurwas[losujNumer(0, kurwas.length - 1)];
 });
 
 window.addEventListener("keydown", function (event) {
