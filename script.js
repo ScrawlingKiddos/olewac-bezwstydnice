@@ -10,6 +10,7 @@ function inbaStart() {
 
     document.getElementById("message").innerText = "Jan Paweł II Kochał małe dzieci!!😇😇";
     document.getElementById("sekret").style.display = "none";
+
     inba.loop = true;
     
     inba.play();
@@ -42,13 +43,9 @@ window.addEventListener("keydown", function (event) {
         return;
     }
 
-    if (event.key === "Backspace") {
-        buffer = "";
-    } else {
-        buffer += event.key;
-    }
+    buffer += event.key.toLowerCase();
 
-    if (buffer === "inba") {
-        inbaStart();
+    if (buffer.endsWith("inba")){
+        inbaStart()
     }
 });
