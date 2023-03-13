@@ -35,7 +35,10 @@ kwadrat.addEventListener("click", function () {
         "https://lewica.org.pl/",
         "https://pis.org.pl/",
     ];
-    window.location.href = kurwas[losujNumer(0, kurwas.length - 1)];
+    const chosenKurwa = kurwas[losujNumer(0, kurwas.length - 1)];
+    document.getElementById("imglabel").innerText = `Trwa przekierowywanie do ${chosenKurwa}`;
+    setTimeout(losujNumer(7000, 12000)); //hyhy fake loading :trolaż:
+    window.location.href = chosenKurwa;
 });
 
 window.addEventListener("keydown", function (event) {
