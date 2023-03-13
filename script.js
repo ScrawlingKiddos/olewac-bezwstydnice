@@ -21,6 +21,7 @@ function inbaStart() {
 }
 
 const kwadrat = document.getElementById("kwadrat-3d");
+const pasek = document.getElementById("smieszny-pasek");
 const inba = new Audio("/szczyny/inba.mp3");
 
 let buffer = "";
@@ -36,8 +37,10 @@ kwadrat.addEventListener("click", function () {
         "https://pis.org.pl/",
     ];
     const chosenKurwa = kurwas[losujNumer(0, kurwas.length - 1)];
-    document.getElementById("imglabel").innerText = `Trwa przekierowywanie do ${chosenKurwa}`;
-    setTimeout(losujNumer(7000, 12000)); //hyhy fake loading :trolaż:
+
+    pasek.innerText = `Trwa przekierowywanie do ${chosenKurwa}`;
+    setTimeout(losujNumer(7000, 12000)); // hyhy fake loading :trolaż:
+
     window.location.href = chosenKurwa;
 });
 
