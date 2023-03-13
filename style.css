@@ -23,7 +23,7 @@ body {
     margin: 70px auto 0;
 }
 
-.duże {
+.duze {
     margin: 10px;
     font-size: 72px;
 }
@@ -60,7 +60,7 @@ body {
     background-position: center;
 }
 
-.przód {
+.przod {
     transform: rotateX(0deg) translateZ(100px);
 }
 .tyl {
