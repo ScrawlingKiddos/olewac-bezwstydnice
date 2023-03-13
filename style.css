@@ -5,12 +5,6 @@ body {
     text-align: center;
 }
 
-marquee {
-    background-image: linear-gradient(to left, red, orange, yellow, lime, pink);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 @keyframes rotacja {
     from { 
         transform: rotateX(0deg) rotateY(0deg);
