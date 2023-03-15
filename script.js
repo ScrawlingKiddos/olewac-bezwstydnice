@@ -12,9 +12,10 @@ function inbaStart() {
     document.getElementById("sekret").style.display = "none";
 
     inba.loop = true;
-    
-    inba.play();
+    isInba = true;
+    buffer = ""
 
+    inba.play();
     setInterval(function () {
         document.body.style.backgroundColor = `rgb(${losujNumer(0, 255)}, ${losujNumer(0, 255)}, ${losujNumer(0, 255)})`;
     }, 100);
@@ -44,14 +45,19 @@ kwadrat.addEventListener("click", function () {
     window.location.href = chosenKurwa;
 });
 
+let isInba = false
 window.addEventListener("keydown", function (event) {
     if (event.key.length !== 1 && event.key !== "Backspace") {
         return;
     }
-
-    buffer += event.key.toLowerCase();
-
+    if (!isInba) {
+        buffer += event.key.toLowerCase();
+    }
+    if(buffer.length === 100){
+        buffer = "";
+    }
+    console.log(buffer)
     if (buffer.endsWith("inba")){
-        inbaStart()
+        inbaStart();
     }
 });
