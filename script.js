@@ -8,14 +8,15 @@ function inbaStart() {
     kwadrat.style.backgroundImage = "url('/szczyny/rzultamorda.jpg')";
     kwadrat.style.backgroundSize = "100%";
 
-    document.getElementById("message").innerText = "Jan Paweł II Kochał małe dzieci!!😇😇";
-    document.getElementById("sekret").style.display = "none";
+    wiadomosc.innerText = "Jan Paweł II Kochał małe dzieci!!😇😇";
+    sekret.style.display = "none";
 
-    inba.loop = true;
     isInba = true;
-    buffer = ""
-
+    buffer = "";
+    
+    inba.loop = true;
     inba.play();
+
     setInterval(function () {
         document.body.style.backgroundColor = `rgb(${losujNumer(0, 255)}, ${losujNumer(0, 255)}, ${losujNumer(0, 255)})`;
     }, 100);
@@ -23,9 +24,13 @@ function inbaStart() {
 
 const kwadrat = document.getElementById("kwadrat-3d");
 const pasek = document.getElementById("smieszny-pasek");
+const wiadomosc = document.getElementById("wazna-wiadomosc");
+const sekret = document.getElementById("sekret");
+
 const inba = new Audio("/szczyny/inba.mp3");
 
 let buffer = "";
+let isInba = false;
 
 kwadrat.addEventListener("click", function () {
     const kurwas = [
@@ -45,19 +50,20 @@ kwadrat.addEventListener("click", function () {
     window.location.href = chosenKurwa;
 });
 
-let isInba = false
 window.addEventListener("keydown", function (event) {
     if (event.key.length !== 1 && event.key !== "Backspace") {
         return;
     }
+
     if (!isInba) {
         buffer += event.key.toLowerCase();
     }
-    if(buffer.length === 100){
+
+    if (buffer.length === 100) {
         buffer = "";
     }
-    console.log(buffer)
-    if (buffer.endsWith("inba")){
+
+    if (buffer.endsWith("inba")) {
         inbaStart();
     }
 });
