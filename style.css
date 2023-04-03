@@ -54,28 +54,30 @@ body {
 
     background-image: inherit;
 
-    /* background-color: blue;
-    border: 5px solid yellow; */
+    /*
+    background-color: blue;
+    border: 5px solid yellow;
+    */
 
     background-size: 130%;
     background-position: center;
 }
 
-.przod {
+#twarz-przod {
     transform: rotateX(0deg) translateZ(100px);
 }
-.tyl {
+#twarz-tyl {
     transform: rotateX(-180deg) translateZ(100px);
 }
-.lewo {
+#twarz-lewo {
     transform: rotateY(-90deg) translateZ(100px);
 }
-.prawo {
+#twarz-prawo {
     transform: rotateY(90deg) translateZ(100px);
 }
-.gora {
+#twarz-gora {
     transform: rotateX(90deg) translateZ(100px);
 }
-.dol {
+#twarz-dol {
     transform: rotateX(-90deg) translateZ(100px);
 }
