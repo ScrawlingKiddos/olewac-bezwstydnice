@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url(szczyny/komicznybez.ttf);
+}
+
 body {
     background-color: black;
     color: white;
 
-    font-family: "Comic Sans MS", "Comic Sans", serif;
+    font-family: "Comic Sans MS", serif;
     text-align: center;
 }
 
