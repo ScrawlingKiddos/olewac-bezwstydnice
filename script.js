@@ -73,7 +73,7 @@ kwadrat.addEventListener("click", function () {
     ];
     const wylosowanaKurwa = kurwy[losujNumer(0, kurwy.length - 1)];
 
-    pasek.innerText = `Trwa przekierowywanie do ${wylosowanaKurwa}`;
+    pasek.innerText = `milego ogladania kurwy na stornie ${wylosowanaKurwa} xdd`;
     setTimeout(losujNumer(7000, 12000)); // hyhy fake loading :trolaż:
 
     window.location.href = wylosowanaKurwa;
