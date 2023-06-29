@@ -41,7 +41,7 @@ function inbaStart() {
     setInterval(ustawLosowyKolor, 100);
 }
 
-function inbaStart() {
+function beutoStart() {
     document.style.backgroundImage = "url(szczyny/beuto.png)";
 
     wiadomosc.innerText = "beuto";
