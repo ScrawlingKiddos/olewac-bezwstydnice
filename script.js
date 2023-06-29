@@ -42,7 +42,7 @@ function inbaStart() {
 }
 
 function beutoStart() {
-    document.style.backgroundImage = "url(szczyny/beuto.png)";
+    document.body.style.backgroundImage = "url(szczyny/beuto.png)";
 
     wiadomosc.innerText = "beuto";
     sekret.style.display = "none";
