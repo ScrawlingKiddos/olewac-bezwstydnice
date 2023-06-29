@@ -43,6 +43,14 @@ function inbaStart() {
 
 function beutoStart() {
     document.body.style.backgroundImage = "url(szczyny/beuto.png)";
+    document.body.style.backgroundSize = "contain";
+
+    kwadrat.addEventListener("click", function() {
+        window.location.href = "https://cute-catboy-shrine.tumblr.com/";
+    });
+
+    kwadrat.style.backgroundImage = "url(szczyny/beuto.png)";
+    kwadrat.style.backgroundSize = "100%";
 
     wiadomosc.innerText = "beuto";
     sekret.style.display = "none";
