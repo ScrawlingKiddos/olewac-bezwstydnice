@@ -41,12 +41,26 @@ function inbaStart() {
     setInterval(ustawLosowyKolor, 100);
 }
 
+function inbaStart() {
+    document.style.backgroundImage = "url(szczyny/beuto.png)";
+
+    wiadomosc.innerText = "beuto";
+    sekret.style.display = "none";
+
+    inbowanie = true;
+    bufor = "";
+
+    duwet.loop = true;
+    duwet.play();
+}
+
 const kwadrat = document.getElementById("kwadrat-3d");
 const pasek = document.getElementById("smieszny-pasek");
 const wiadomosc = document.getElementById("wazna-wiadomosc");
 const sekret = document.getElementById("sekret");
 
 const inba = new Audio("/szczyny/inba.mp3");
+const duwet = new Audio("/szczyny/duwet.mp3");
 
 let bufor = "";
 let inbowanie = false;
@@ -90,5 +104,7 @@ window.addEventListener("keydown", function (event) {
 
     if (bufor.endsWith("inba")) {
         inbaStart();
+    } else if (bufor.endsWith("beuto")) {
+        beutoStart();
     }
 });
